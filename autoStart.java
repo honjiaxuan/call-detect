@@ -3,10 +3,7 @@ package com.call.detect;
 import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
-import android.provider.Telephony;
-import android.telephony.SmsMessage;
 import android.telephony.TelephonyManager;
-import android.text.format.DateFormat;
 import android.util.Log;
 
 
@@ -25,7 +22,7 @@ public class autoStart extends BroadcastReceiver {
             if (intentAction.equals("android.intent.action.NEW_OUTGOING_CALL")) {
                 // if the intent action is outgoing call, then extract the info from the intent, show in log
                 try { 
-                     add = intent.getExtras().getString("android.intent.extra.PHONE_NUMBER"); 
+                     String add = intent.getExtras().getString("android.intent.extra.PHONE_NUMBER"); 
                      OutgoingCall.startOutgoingCallService(context, add); 
                  }catch (Exception e) { 
                      Log.d("autostart","outgoing call intent exception occur"); 
