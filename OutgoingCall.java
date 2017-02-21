@@ -1,11 +1,9 @@
 package com.call.detect;
 
 import android.app.IntentService;
-import android.content.ComponentName;
 import android.content.Intent;
 import android.content.Context;
 import android.content.SharedPreferences;
-import android.content.pm.PackageManager;
 import android.util.Log;
 
 // to detect the number when call out, the number is saved and going to use in phone state service
